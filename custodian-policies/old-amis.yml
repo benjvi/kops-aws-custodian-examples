@@ -1,0 +1,8 @@
+policies:
+  - name: ec2-old-amis
+    resource: ec2
+    filters:
+      - type: image-age
+        op: ge
+        days: 600
+      - "tag:KubernetesCluster": present

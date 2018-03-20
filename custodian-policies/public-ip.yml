@@ -1,0 +1,6 @@
+policies:
+  - name: ec2-public-ip
+    resource: ec2
+    filters:
+      - PublicIpAddress: present
+      - "tag:KubernetesCluster": present
